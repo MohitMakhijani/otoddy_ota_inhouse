@@ -1,3 +1,9 @@
+## 1.0.1
+
+* Updated official package metadata and homepage to https://otoddy.com.
+* Added comprehensive OTODDY documentation, branding, and enterprise examples.
+* Streamlined client initialization API with `OtoddyOTA`.
+
 ## 1.0.0
 
 * Initial release of `otoddyota`.
