@@ -1,10 +1,10 @@
 {
   "roots": [
-    "inhouse_codepush"
+    "otoddyota"
   ],
   "packages": [
     {
-      "name": "inhouse_codepush",
+      "name": "otoddyota",
       "version": "1.0.0",
       "dependencies": [
         "flutter",

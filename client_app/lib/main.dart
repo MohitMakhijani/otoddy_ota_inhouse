@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inhouse_codepush/inhouse_codepush.dart';
+import 'package:otoddyota/otoddyota.dart';
 
 // Change these to ship an over-the-air patch
 const String kAppLabel = '⚡ Client App - V2.0 (OTA Patched!) 🚀';
@@ -7,7 +7,7 @@ const Color kAppColor = Color(0xFF0077B6); // Ocean Cerulean Blue
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  InhouseCodePush.init(
+  OtoddyOTA.init(
     serverUrls: ['http://10.0.2.2:8080', 'http://localhost:8080'],
     appId: 'com.test.client_app',
     releaseVersion: '1.0.0',

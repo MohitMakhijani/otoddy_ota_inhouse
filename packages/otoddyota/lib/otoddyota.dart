@@ -1,4 +1,4 @@
-library inhouse_codepush;
+library otoddyota;
 
 import 'dart:async';
 import 'dart:convert';
@@ -21,9 +21,9 @@ enum CodePushStatus {
   error,
 }
 
-/// The main entry point for In-House Code Push in your Flutter app.
-class InhouseCodePush {
-  InhouseCodePush._();
+/// The main entry point for OtoddyOTA in your Flutter app.
+class OtoddyOTA {
+  OtoddyOTA._();
 
   static List<String> _baseUrls = [];
   static String? _appId;
@@ -200,3 +200,6 @@ class InhouseCodePush {
     }
   }
 }
+
+/// Backwards compatibility alias for InhouseCodePush
+typedef InhouseCodePush = OtoddyOTA;

@@ -1,4 +1,4 @@
-# In-House Code Push (Flutter Package)
+# OtoddyOTA (Flutter Package)
 
 A drop-in over-the-air (OTA) code push client for Flutter applications. Allows you to deliver instant Dart bug fixes and UI updates to your users without going through app store review or re-installing APKs.
 
@@ -6,34 +6,34 @@ A drop-in over-the-air (OTA) code push client for Flutter applications. Allows y
 
 ## 1. Installation
 
-Add `inhouse_codepush` to your `pubspec.yaml`:
+Add `otoddyota` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
   flutter:
     sdk: flutter
-  inhouse_codepush:
-    path: path/to/inhouse-codepush/packages/inhouse_codepush
+  otoddyota:
+    path: path/to/packages/otoddyota
     # Or from git:
     # git:
-    #   url: https://github.com/your-org/inhouse-codepush.git
-    #   path: packages/inhouse_codepush
+    #   url: https://github.com/MohitMakhijani/otoddy_ota_inhouse.git
+    #   path: packages/otoddyota
 ```
 
 ---
 
 ## 2. Usage in Dart
 
-Initialize `InhouseCodePush` early in your `main()`:
+Initialize `OtoddyOTA` early in your `main()`:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:inhouse_codepush/inhouse_codepush.dart';
+import 'package:otoddyota/otoddyota.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  InhouseCodePush.init(
+  OtoddyOTA.init(
     serverUrls: [
       'https://codepush.yourdomain.com', // Production server / tunnel
       'http://10.0.2.2:8080',            // Android emulator local testing
