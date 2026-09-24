@@ -1,0 +1,20 @@
+name: inhouse_codepush_server
+description: >-
+  In-house Shorebird-compatible code-push backend. Implements the exact updater
+  wire contract (POST /api/v1/patches/check, POST /api/v1/patches/events),
+  Range-capable patch hosting, and RSA-2048 patch signing.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  dart_frog: ^1.1.0
+  # SHA-256 of patch artifacts.
+  crypto: ^3.0.6
+  # RSA-2048 PKCS#1 v1.5 signing of the patch hash (matches the updater).
+  basic_utils: ^5.8.2
+
+dev_dependencies:
+  test: ^1.25.0

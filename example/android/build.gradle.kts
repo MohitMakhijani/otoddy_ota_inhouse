@@ -8,7 +8,7 @@ val localEngineMaven: String? = System.getenv("LOCAL_ENGINE_MAVEN")
 allprojects {
     repositories {
         if (!localEngineMaven.isNullOrBlank()) {
-            maven { url = uri(localEngineMaven) }
+            maven { url = java.io.File(localEngineMaven).toURI() }
         } else {
             logger.warn(
                 "LOCAL_ENGINE_MAVEN not set -> building WITHOUT the code-push hook.",

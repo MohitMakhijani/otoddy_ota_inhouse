@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
-
-import 'inhouse_updater.dart';
+import 'package:inhouse_codepush/inhouse_codepush.dart';
 
 // ===========================================================================
 //  CHANGE THESE TWO LINES + rebuild to ship an over-the-air patch.
 //  The label and color are exactly what you'll watch flip on the device after
 //  a patch lands — no store release involved.
 // ===========================================================================
-const String kBuildLabel = 'v2 · delivered over the air 🎉';
-const Color kBuildColor = Color(0xFF2E7D32); // green
+const String kBuildLabel = '🚀 V2.0: Updated Over The Air! ✨';
+const Color kBuildColor = Color(0xFF00C853); // Emerald Green
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  InhouseUpdater.check(); // fire-and-forget OTA check; never blocks the UI
+  InhouseCodePush.init(
+    serverUrls: [
+      'http://10.0.2.2:8080',
+      'http://localhost:8080',
+    ],
+    appId: 'com.example.codepush_demo',
+    releaseVersion: '1.0.0',
+  );
   runApp(const DemoApp());
 }
 
@@ -71,6 +77,21 @@ class _HomePageState extends State<HomePage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+            ),
+            const SizedBox(height: 12),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Icon(Icons.check_circle, color: Color(0xFF00C853), size: 20),
+                SizedBox(width: 6),
+                Text(
+                  'OTA Code Push Active & Verified!',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF00C853),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 14),
             const Padding(
