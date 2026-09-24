@@ -1,7 +1,9 @@
 name: otoddyota
-description: Simple, drop-in Over-The-Air (OTA) code push client for Flutter.
+description: Simple, drop-in Over-The-Air (OTA) code push client for Flutter applications with automatic engine patch detection.
 version: 1.0.0
-publish_to: none
+homepage: https://github.com/MohitMakhijani/otoddy_ota_inhouse
+repository: https://github.com/MohitMakhijani/otoddy_ota_inhouse
+issue_tracker: https://github.com/MohitMakhijani/otoddy_ota_inhouse/issues
 
 environment:
   sdk: ^3.5.0
